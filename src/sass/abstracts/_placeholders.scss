@@ -1,0 +1,13 @@
+@import './mixins';
+
+%text-center {
+    text-align: center;
+}
+
+%upper-font {
+    text-transform: uppercase;
+}
+
+%opacity-half {
+    opacity: 0.5;
+}

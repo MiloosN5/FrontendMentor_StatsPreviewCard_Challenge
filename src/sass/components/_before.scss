@@ -1,0 +1,12 @@
+
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.stats {
+    &__img {
+        &::before {
+            @include before('content-empty', 'w-100%', 'mw-none', 'h-100%', 'soft-violet-overlay');
+            @extend %opacity-half;
+        }
+    }
+}

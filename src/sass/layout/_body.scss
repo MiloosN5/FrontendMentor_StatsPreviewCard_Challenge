@@ -1,0 +1,19 @@
+@import '../abstracts/mixins';
+
+body {
+    // background: url('../design/mobile-design.jpg');
+    // background: url('../design/desktop-design.jpg');
+    //background-repeat: no-repeat;
+    // background-size: 100% auto;
+    // opacity: 0.5;
+    // margin-top: 90px;
+    //margin-top: 10px;
+}
+
+
+body {
+    @include container('w-100%', 'mw-none', 'h-100%', 'very-dark-blue-main-background');
+    @include flexbox('fd-column', 'fjc-center', 'fai-center', 'fw-nowrap', 'cg-normal', 'rg-normal');
+    @include padding('pi-body', 'pb-0');
+}
+

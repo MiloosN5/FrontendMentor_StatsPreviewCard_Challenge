@@ -1,0 +1,13 @@
+@use 'sass:map';
+@import '../abstracts/mixins';
+@import '../abstracts/functions';
+
+main {
+    @include container('w-100%', 'mw-main', 'h-100%', 'dark-desaturated-blue-card-background');
+    @include border('b-none', 'br-10px');
+    @include overflow('o-hidden');
+    @include grid('grid-template-columns-1fr', 'grid-template-rows-auto', 'grid-gap-0');
+    @include breakpoint('large') {
+        grid-template-columns: map.get($grid, 'grid-template-columns-desktop');
+    }
+}

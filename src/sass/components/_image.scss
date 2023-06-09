@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+
+.stats__img {
+    img {
+        @include container('w-100%', 'mw-none', 'h-auto', 'void');
+    }
+}

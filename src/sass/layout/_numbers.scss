@@ -1,0 +1,17 @@
+@use 'sass:map';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.stats__content__numbers {
+    @include container('w-100%', 'mw-none', 'h-auto', 'primary-soft-blue');
+    @include grid('grid-template-columns-1fr', 'grid-template-rows-auto', 'grid-gap-numbers');
+    @include breakpoint('large') {
+        grid-template-columns: map.get($grid, 'grid-template-columns-3x1fr');
+        padding-right: 25px;
+    }
+    &__wrapper {
+        p:first-of-type {
+            @include margin('mi-0', 'mb-number');
+        }
+    }
+}

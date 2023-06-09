@@ -1,0 +1,22 @@
+@use 'sass:map';
+@import '../abstracts/mixins';
+@import '../abstracts/placeholders';
+
+.stats__content {
+    @include flexbox('fd-column', 'fjc-center', 'fai-center', 'fw-nowrap', 'cg-normal', 'rg-normal');
+    @include padding('pi-content', 'pb-content');
+    @extend %text-center;
+    &__title {
+        @include margin('mi-0', 'mb-title');
+    }
+    &__description {
+        @include margin('mi-0', 'mb-description');
+        @include breakpoint('large') {
+            padding-right: 50px;
+        }
+    }
+    @include breakpoint('large') {
+        order: 1;
+        text-align: map.get($text-aligns, 'ta-left');
+    }
+}

@@ -1,0 +1,45 @@
+@use 'sass:map';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/placeholders';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+//----------------- Font Family -----------------//
+.stats__content {
+    font-family: map.get($fonts, 'ff-Inter');
+}
+
+.stats__content__numbers p:last-of-type {
+    font-family: map.get($fonts, 'ff-Lexend_Deca');
+}
+
+//----------------- Other font settings -----------------//
+.stats {
+    &__content {
+        &__title {
+            @include font('fs-title', 'fw-700', 'lh-title', 'white-main-heading-stats', 'ls-normal');
+            span {
+                color: map.get($colors, 'soft-violet-accent');
+            }
+        }
+        &__description {
+            @include font('fs-description', 'fw-400', 'lh-description', 'slightly-transparent-white-main-paragraph', 'ls-description');         
+            @include breakpoint('large') {
+                letter-spacing: map.get($letter-spacing, 'ls-normal');
+            }
+        }
+        &__numbers {
+            &__wrapper {
+                p:first-of-type {
+                    @include font('fs-number', 'fw-700', 'lh-description', 'white-main-heading-stats', 'ls-number');              
+                }
+                p:last-of-type {
+                    // color: red;
+                    @include font('fs-item', 'fw-400', 'lh-description', 'slightly-transparent-white-stat-headings', 'ls-item');            
+                    @extend %upper-font;
+                }
+            }
+
+        }
+    }
+}
